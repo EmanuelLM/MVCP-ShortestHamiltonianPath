@@ -1,0 +1,55 @@
+!@encoding CP1252
+model "MinVertexCover"
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+
+declarations
+DATAFILE='D:\Desktop\HEC\AlgorithmesPourOptimisation\Projet\ModelMVCP\MatriceAdjacence.txt'
+N:integer !Let N be the number of vertices
+end-declarations
+
+
+N:=22
+
+declarations
+G:array(1..N,1..N) of integer;
+x:array(1..N) of mpvar
+cost:array(1..N) of real
+obj:linctr 
+end-declarations
+
+initializations from DATAFILE
+	G
+end-initializations
+
+cost :: [ 0.00125,
+0.016666667,
+0.0125,
+0.016556291,
+1,
+0.024752475,
+0.0125,
+0.25,
+0.016666667,
+0.016556291,
+0.025,
+0.048076923,
+0.025,
+0.05,
+0.25,
+0.047169811,
+0.25,
+0.00025,
+0.016666667,
+0.016666667,
+0.0025,
+0.000833333]
+obj:=sum(i in 1..N) cost(i)*x(i)
+!s.t 
+forall(i,j in 1..N | i<>j and G(i,j)=1) x(i)+x(j)>=1
+forall(i in 1..N) x(i) is_binary
+
+setparam("XPRS_VERBOSE",true); 
+
+
+minimize(obj)
+end-model
