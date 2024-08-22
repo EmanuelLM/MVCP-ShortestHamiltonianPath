@@ -1,11 +1,9 @@
-# MVCP-ShortestHamiltonianPath : Meta-heuristic Algorithm for Elevator Group Scheduling Optimization
-Projet Algorithmes pour l'optimisation - Gestion d'ascenseurs
+# MVCP-ShortestHamiltonianPath :
+Meta-heuristic Algorithm for Elevator Group Scheduling Optimization
 
 Minimum vertex cover problem implementation (22 nodes)
 
 Shortest hamiltonian Path Tree Graph (100 nodes)
-
-I'll start by reviewing the contents of the newly uploaded Jupyter notebook file to understand the project and highlight any optimizations that have been made. Then, I will provide the requested GitHub commit description.
 
 **Project Description:**
 Meta-heuristic Algorithm for Elevator Group Scheduling Optimization project is a Python-based simulation and optimization tool for managing elevator operations in a multi-story building. The goal is to optimize the allocation of elevators to minimize the waiting time of users and improve the overall efficiency of elevator operations. The project implements various algorithms to simulate elevator movement, user waiting times, and optimizations to determine the most efficient paths and allocations.
@@ -29,4 +27,3 @@ Meta-heuristic Algorithm for Elevator Group Scheduling Optimization project is a
 2. **Running the Simulation:** Load the provided Jupyter notebook and run the cells sequentially. The notebook contains all the necessary code to initialize the simulation, execute the algorithms, and display the results.
 3. **Analyzing Results:** After running the simulation, the results will be printed directly in the notebook, showing the optimized paths for each elevator, along with a summary of total and average waiting times.
 
-This commit finalizes the "Ascenseurs" project with implemented optimizations and detailed documentation for running the simulation effectively.
